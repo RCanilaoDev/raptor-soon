@@ -32,9 +32,10 @@
   @keyframes contentFadeIn { to { opacity: 1; transform: translateY(0); } }
   @keyframes logoFadeIn { to { opacity: 1; transform: translateY(0) scale(1); } }
   @media (prefers-reduced-motion: reduce) { .content-fade, .logo-fade, .hero-fade { opacity: 1; transform: none; animation: none; } }
-  html { scroll-behavior: smooth;max-width: 100%;overflow-x: hidden; }
+  html { margin: 0; padding: 0; scroll-behavior: smooth; max-width: 100%; overflow-x: hidden; }
   body {
     margin: 0;
+    padding: 0;
     min-height: 100vh;
     color: var(--white);
     background:
