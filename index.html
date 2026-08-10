@@ -31,7 +31,7 @@
   @keyframes contentFadeIn { to { opacity: 1; transform: translateY(0); } }
   @keyframes logoFadeIn { to { opacity: 1; transform: translateY(0) scale(1); } }
   @media (prefers-reduced-motion: reduce) { .content-fade, .logo-fade, .hero-fade { opacity: 1; transform: none; animation: none; } }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth;max-width: 100%;overflow-x: hidden; }
   body {
     margin: 0;
     min-height: 100vh;
@@ -42,6 +42,7 @@
       linear-gradient(140deg, #020407 0%, #06101b 44%, #03070d 100%);
     font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     overflow-x: hidden;
+    max-width: 100%;
   }
   body::before {
     content: "";
