@@ -5617,3 +5617,50 @@ body {
   display: flex;
   justify-content: center;
 }
+
+
+/* =========================================================
+   BUILD 15.56 // PRIMARY POSITIONING HIERARCHY
+   Technical SEO & Search Architecture = primary discipline.
+   Commerce Systems + Web Operations = supporting capabilities.
+   ========================================================= */
+
+@media (min-width: 1041px) {
+  .home-positioning-grid {
+    grid-template-columns: 1.35fr .825fr .825fr;
+  }
+
+  .about-positioning-grid {
+    grid-template-columns: 1.35fr .825fr .825fr;
+  }
+}
+
+.system-card-primary,
+.about-pillar-primary {
+  border-color: rgba(103,201,255,.38);
+  box-shadow:
+    inset 0 0 0 1px rgba(63,155,233,.05),
+    0 18px 42px rgba(0,42,82,.12);
+}
+
+.system-card-primary::before {
+  background:
+    linear-gradient(130deg, rgba(68,160,238,.18), transparent 42%);
+}
+
+.system-card-supporting,
+.about-pillar-supporting {
+  border-color: rgba(99,160,213,.13);
+}
+
+.system-card-primary .card-code,
+.about-pillar-primary > span {
+  color: #67C9FF;
+}
+
+@media (max-width: 1040px) {
+  .home-positioning-grid,
+  .about-positioning-grid {
+    grid-template-columns: 1fr;
+  }
+}

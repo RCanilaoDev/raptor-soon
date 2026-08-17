@@ -496,3 +496,35 @@ Changes:
 - Installed it as the favicon on all 25 HTML pages.
 - Source favicon dimensions: 1000×1000.
 - Removed any older icon declarations before installing the new site-wide favicon.
+
+## Build 15.55 Title + meta description optimization
+- Refined titles and meta descriptions across all 25 public pages.
+- Strengthened the Homepage title around Technical SEO while retaining Commerce and Web Operations.
+- Kept service-page targeting distinct to reduce internal keyphrase competition.
+- Added natural commercial phrases such as Technical SEO Services, Local SEO, Shopify Development Services, Website Migration Services, and Website Development Services where they fit the page.
+- Meta descriptions are now concise, unique, and written for click-through rather than keyword density.
+- No obsolete `meta keywords` tag was added.
+- Synchronized governed JSON-LD WebPage and Service descriptions with the updated metadata.
+- H1s, visible page copy, canonicals, GTM, sitemap, robots.txt, favicon, and site design remain unchanged.
+
+## Build 15.56 Primary positioning hierarchy
+- Repositioned Raptor publicly around one primary discipline: `Technical SEO & Search Architecture`.
+- Kept `Raptor Search Systems` as internal methodology language on the primary discipline page.
+- Reframed `Commerce Systems` and `Web Operations` as supporting technical capabilities rather than equal primary pillars.
+- Updated global navigation to `Technical SEO & Search | Commerce Systems | Web Operations | SEO Audit`.
+- Updated footer hierarchy, footer positioning statement, and generic system labels across the site.
+- Reworked the Homepage hero and service architecture messaging around the primary/secondary hierarchy.
+- Visually strengthened the primary Search card on Homepage and About while preserving responsive behavior.
+- Repositioned Commerce Systems as ecommerce technical expertise and Web Operations as development/infrastructure expertise.
+- Updated public Search breadcrumbs from `Search Systems` to `Technical SEO & Search`.
+- Updated Homepage/Search/About metadata and synchronized governed JSON-LD.
+- Added an Organization description to the site-wide schema graph reflecting the new positioning.
+- URLs, child service pages, sitemap, robots.txt, GTM, favicon, HQCP, Priority Model, and Technical SEO System Audit remain intact.
+
+## Build 15.57 Homepage hero distinction
+- Replaced the Homepage H1 `Technical SEO & Search Architecture.` with the outcome-driven headline:
+  `Pinpoint the technical issues holding back your search performance.`
+- Kept the Homepage eyebrow `Raptor // Technical SEO & Search Architecture` so the primary discipline remains explicit.
+- Kept the Technical SEO & Search page H1 as `Technical SEO & Search Architecture`.
+- Tightened the Homepage supporting paragraph to reinforce diagnosis, verification, and prioritization.
+- Metadata, schema, GTM, sitemap, robots.txt, favicon, navigation, and service architecture remain unchanged.
