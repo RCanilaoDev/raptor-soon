@@ -528,3 +528,25 @@ Changes:
 - Kept the Technical SEO & Search page H1 as `Technical SEO & Search Architecture`.
 - Tightened the Homepage supporting paragraph to reinforce diagnosis, verification, and prioritization.
 - Metadata, schema, GTM, sitemap, robots.txt, favicon, navigation, and service architecture remain unchanged.
+
+## Build 15.58 Homepage H1 size refinement
+- Reduced only the Homepage `#hero-title` size.
+- Desktop: `clamp(40px, 5vw, 64px)`.
+- Mobile <=560px: `clamp(38px, 12.5vw, 54px)`.
+- Homepage headline wording, spacing, and all other page H1 sizes remain unchanged.
+
+## Build 15.59 Mobile menu + footer bird position
+- Fixed the hamburger dropdown being clipped by the angular `.nav-shell` `clip-path`.
+- Desktop header keeps its angular geometry; clipping is disabled only at the <=1220px hamburger breakpoint.
+- Added explicit mobile menu z-index, touch behavior, outside-click closing, Escape handling, and desktop-resize reset.
+- Raised only the footer bird-head image by 30% on Homepage and Contact.
+- RAPTOR wordmark and CONSULTING GROUP subtext size/position remain unchanged.
+
+## Build 15.60 Favicon compatibility fix
+- Replaced the single WebP-only favicon declaration with a full favicon set.
+- Added root `favicon.ico` containing 16×16, 32×32, and 48×48 sizes.
+- Added explicit 16×16 and 32×32 PNG favicons.
+- Added a 180×180 Apple touch icon.
+- Added `?v=15.60` versioning to favicon URLs to help bypass stale browser favicon caches after deployment.
+- Original 1000×1000 WebP source remains in `assets/`.
+- Applied the favicon set to all 25 HTML pages.

@@ -5664,3 +5664,78 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* =========================================================
+   BUILD 15.58 // HOMEPAGE H1 SIZE REFINEMENT
+   Slightly reduce the homepage hero headline on desktop
+   and mobile without affecting other page H1s.
+   ========================================================= */
+
+#hero-title {
+  font-size: clamp(40px, 5vw, 64px);
+}
+
+@media (max-width: 560px) {
+  #hero-title {
+    font-size: clamp(38px, 12.5vw, 54px);
+  }
+}
+
+
+/* =========================================================
+   BUILD 15.59 // MOBILE MENU + FOOTER BIRD POSITION
+   1. Prevent the angular nav-shell clip-path from clipping
+      the mobile dropdown.
+   2. Raise the footer bird head by 30% at all breakpoints.
+   ========================================================= */
+
+/* MOBILE / TABLET NAV
+   The desktop nav-shell clip-path clips absolutely-positioned
+   children. Disable it once the hamburger navigation takes over. */
+@media (max-width: 1220px) {
+  .site-header .nav-shell,
+  .site-header.is-compact .nav-shell {
+    clip-path: none;
+    overflow: visible;
+    position: relative;
+  }
+
+  .site-header .menu-toggle {
+    position: relative;
+    z-index: 80;
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+
+  .site-header .primary-nav {
+    z-index: 70;
+  }
+
+  .site-header .primary-nav.open,
+  .site-header .primary-nav.is-open {
+    display: flex;
+  }
+}
+
+/* FOOTER LOGO
+   Raise only the bird head by 30%. RAPTOR and CONSULTING GROUP
+   remain in their current positions. */
+.footer-split-logo__bird,
+.footer-brand-mark .footer-split-logo__bird {
+  bottom: clamp(60px, 7.77vw, 116px);
+}
+
+@media (max-width: 700px) {
+  .footer-split-logo__bird,
+  .footer-brand-mark .footer-split-logo__bird {
+    bottom: clamp(43px, 8.24vw, 78px);
+  }
+}
+
+@media (max-width: 520px) {
+  .footer-split-logo__bird,
+  .footer-brand-mark .footer-split-logo__bird {
+    bottom: 31px;
+  }
+}

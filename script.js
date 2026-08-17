@@ -9,7 +9,8 @@
     nav.classList.toggle('is-open', open);
   };
 
-  toggle.addEventListener('click', () => {
+  toggle.addEventListener('click', (event) => {
+    event.stopPropagation();
     setOpen(toggle.getAttribute('aria-expanded') !== 'true');
   });
 
@@ -17,9 +18,26 @@
     if (event.target.closest('a')) setOpen(false);
   });
 
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') setOpen(false);
+  document.addEventListener('click', (event) => {
+    if (
+      toggle.getAttribute('aria-expanded') === 'true' &&
+      !nav.contains(event.target) &&
+      !toggle.contains(event.target)
+    ) {
+      setOpen(false);
+    }
   });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      setOpen(false);
+      toggle.focus();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1220) setOpen(false);
+  }, { passive: true });
 })();
 
 
