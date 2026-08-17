@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Raptor Consulting Group — Coming Soon</title>
+<link rel="icon" type="image/webp" href="raptor-consulting-logo-img-stg.webp">
+<meta name="description" content="Raptor Consulting Group — SEO business services, Shopify services, and website production optimization & management." />
+<style>
+  :root {
+    --bg: #03060b;
+    --bg-2: #07101b;
+    --panel: rgba(8, 18, 31, 0.84);
+    --panel-2: rgba(7, 13, 23, 0.96);
+    --line: rgba(82, 151, 219, 0.18);
+    --line-bright: rgba(98, 180, 255, 0.45);
+    --blue: #3f9be9;
+    --blue-2: #1a75c7;
+    --cyan: #67c9ff;
+    --silver: #c7d1dc;
+    --muted: #8597aa;
+    --white: #f4f8fc;
+  }
+  * { box-sizing: border-box; }
+  .content-fade { opacity: 0; transform: translateY(14px); animation: contentFadeIn 1s ease-out forwards; }
+  .logo-fade { opacity: 0; transform: translateY(8px) scale(.985); animation: logoFadeIn 1.2s ease-out forwards; }
+  .hero-fade { opacity: 0; transform: translateY(14px); animation: contentFadeIn 1s ease-out 1.05s forwards; }
+  .content-fade.delay-1 { animation-delay: .15s; }
+  .content-fade.delay-2 { animation-delay: .3s; }
+  .content-fade.delay-3 { animation-delay: .45s; }
+  .content-fade.delay-4 { animation-delay: .6s; }
+  @keyframes contentFadeIn { to { opacity: 1; transform: translateY(0); } }
+  @keyframes logoFadeIn { to { opacity: 1; transform: translateY(0) scale(1); } }
+  @media (prefers-reduced-motion: reduce) { .content-fade, .logo-fade, .hero-fade { opacity: 1; transform: none; animation: none; } }
+  html { scroll-behavior: smooth;max-width: 100%;overflow-x: hidden; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    color: var(--white);
+    background:
+      radial-gradient(circle at 76% 14%, rgba(42, 130, 211, .18), transparent 28%),
+      radial-gradient(circle at 18% 76%, rgba(31, 86, 143, .14), transparent 34%),
+      linear-gradient(140deg, #020407 0%, #06101b 44%, #03070d 100%);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(71, 132, 189, .07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(71, 132, 189, .07) 1px, transparent 1px);
+    background-size: 54px 54px;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,.7), transparent 76%);
+  }
+  body::after {
+    content: "";
+    position: fixed; inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(0deg, rgba(255,255,255,.012) 0, rgba(255,255,255,.012) 1px, transparent 1px, transparent 3px);
+    mix-blend-mode: screen;
+    opacity: .6;
+  }
+  .frame {
+    min-height: 100vh;
+    position: relative;
+    isolation: isolate;
+  }
+  .corner { position: absolute; width: 110px; height: 110px; opacity: .55; }
+  .corner.tl { top: 22px; left: 22px; border-top: 1px solid var(--line-bright); border-left: 1px solid var(--line-bright); }
+  .corner.br { right: 22px; bottom: 22px; border-right: 1px solid var(--line-bright); border-bottom: 1px solid var(--line-bright); }
+  .corner::after {
+    content: ""; position: absolute; width: 28px; height: 2px; background: var(--blue);
+  }
+  .corner.tl::after { left: 0; top: 18px; box-shadow: 0 7px 18px rgba(63,155,233,.7); }
+  .corner.br::after { right: 0; bottom: 18px; box-shadow: 0 7px 18px rgba(63,155,233,.7); }
+  .topbar {
+    width: min(1240px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 24px 0 0;
+    display: flex; justify-content: space-between; align-items: center;
+    color: var(--muted);
+    font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
+  }
+  .status { display:flex; align-items:center; gap:10px; white-space:nowrap; }
+  .status-dot {
+    width: 7px; height: 7px; border-radius: 50%; background: var(--cyan);
+    box-shadow: 0 0 0 5px rgba(103,201,255,.08), 0 0 18px rgba(103,201,255,.75);
+    animation: pulse 2.4s infinite ease-in-out;
+  }
+  @keyframes pulse { 0%,100% { opacity: .45; } 50% { opacity: 1; } }
+  .main { width: min(1180px, calc(100% - 40px)); margin: 0 auto; padding: 54px 0 70px; }
+  .hero {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    min-height: 540px;
+    position: relative;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    width: min(760px, 88vw); aspect-ratio: 1/0.42;
+    background: radial-gradient(ellipse at center, rgba(55, 146, 225, .16), rgba(55,146,225,.04) 45%, transparent 72%);
+    filter: blur(4px);
+    z-index: -1;
+  }
+  .hero-inner { max-width: 820px; padding: 22px 0 24px; }
+  .logo-wrap {
+    width: min(500px, 86vw);
+    margin: 0 auto 22px;
+    padding: 18px 28px 10px;
+    position: relative;
+  }
+  .logo-wrap::before, .logo-wrap::after {
+    content:""; position:absolute; top:50%; width:88px; height:1px; background:linear-gradient(90deg, transparent, var(--line-bright));
+  }
+  .logo-wrap::before { right: 100%; }
+  .logo-wrap::after { left: 100%; transform: rotate(180deg); }
+  .logo { width:100%; display:block; filter: drop-shadow(0 14px 34px rgba(0, 50, 110, .42)); }
+  .eyebrow {
+    display:inline-flex; align-items:center; gap:10px;
+    color: var(--cyan); font-size: 11px; font-weight: 700; letter-spacing: .26em; text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .eyebrow::before, .eyebrow::after { content:""; width:32px; height:1px; background: var(--blue); opacity:.7; }
+  h1 {
+    margin: 0;
+    font-size: clamp(32px, 5vw, 64px);
+    line-height: .88;
+    letter-spacing: -.045em;
+    text-transform: uppercase;
+    font-weight: 900;
+    background: linear-gradient(180deg, #ffffff 8%, #b8c8d8 46%, #6d7d8d 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 40px rgba(76, 163, 235, .08);
+  }
+  .launch-copy {
+    margin: 21px auto 0;
+    color: #9fb1c2;
+    font-size: clamp(15px, 1.7vw, 18px);
+    line-height: 1.75;
+    max-width: 670px;
+  }
+  .divider {
+    height: 1px; margin: 38px 0 28px;
+    background: linear-gradient(90deg, transparent, rgba(83,158,226,.24) 14%, rgba(139,198,247,.5) 50%, rgba(83,158,226,.24) 86%, transparent);
+    position: relative;
+  }
+  .divider::after { content:""; position:absolute; left:50%; top:-2px; width:46px; height:5px; transform:translateX(-50%); background:var(--blue); clip-path:polygon(8% 0,92% 0,100% 50%,92% 100%,8% 100%,0 50%); box-shadow:0 0 20px rgba(63,155,233,.55); }
+  .services-head {
+    display:flex; align-items:end; justify-content:space-between; gap:28px; margin-bottom:18px;
+  }
+  .services-title small { color:var(--blue); text-transform:uppercase; letter-spacing:.2em; font-size:10px; font-weight:800; }
+  .services-title h2 { margin:6px 0 0; font-size:clamp(26px,4vw,42px); text-transform:uppercase; letter-spacing:-.02em; }
+  .services-meta { color:#708296; font-size:11px; letter-spacing:.15em; text-transform:uppercase; text-align:right; }
+  .services { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  .card {
+    position:relative;
+    padding: 30px 28px 28px;
+    min-height: 278px;
+    overflow:hidden;
+    background: linear-gradient(145deg, rgba(10,23,39,.92), rgba(4,10,18,.96));
+    border:1px solid rgba(99,160,213,.18);
+    clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 28px, 100% 100%, 28px 100%, 0 calc(100% - 28px));
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+  }
+  .card:hover { transform:translateY(-5px); border-color:rgba(96,185,255,.42); box-shadow:0 20px 50px rgba(0,37,73,.28); }
+  .card::before {
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background:linear-gradient(130deg, rgba(68,160,238,.12), transparent 34%);
+  }
+  .card::after {
+    content:""; position:absolute; right:18px; top:16px; width:70px; height:1px; background:var(--blue); opacity:.55;
+    box-shadow:0 7px 0 rgba(63,155,233,.24), 0 14px 0 rgba(63,155,233,.12);
+  }
+  .icon {
+    width:52px; height:52px; display:grid; place-items:center; margin-bottom:28px;
+    border:1px solid rgba(93,172,241,.34);
+    background:linear-gradient(145deg, rgba(31,93,148,.28), rgba(7,18,31,.38));
+    transform:skewX(-7deg);
+    box-shadow: inset 0 0 24px rgba(47,144,226,.08);
+  }
+  .icon svg { width:28px; height:28px; transform:skewX(7deg); stroke:var(--cyan); fill:none; stroke-width:1.5; }
+  .card .num { color:#4b6074; font-size:10px; letter-spacing:.18em; font-weight:800; margin-bottom:7px; }
+  .card h3 { margin:0 0 12px; font-size:21px; text-transform:uppercase; line-height:1.12; letter-spacing:-.01em; }
+  .card p { margin:0; color:#8fa2b5; line-height:1.7; font-size:14px; }
+  .card .bar { position:absolute; left:28px; bottom:0; width:72px; height:3px; background:linear-gradient(90deg,var(--blue),transparent); }
+  .call-cta {
+    margin: 26px auto 0;
+    display: flex;
+    justify-content: center;
+  }
+  .call-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 210px;
+    padding: 14px 24px;
+    color: var(--white);
+    background: linear-gradient(145deg, rgba(31,93,148,.34), rgba(7,18,31,.72));
+    border: 1px solid rgba(93,172,241,.42);
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+    box-shadow: inset 0 0 24px rgba(47,144,226,.08), 0 8px 28px rgba(0,37,73,.18);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .16em;
+    font-size: 11px;
+    font-weight: 800;
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+  }
+  .call-button::before {
+    content: "↗";
+    margin-right: 10px;
+    color: var(--cyan);
+    font-size: 14px;
+  }
+  .call-button:hover {
+    transform: translateY(-3px);
+    border-color: rgba(96,185,255,.65);
+    box-shadow: 0 14px 34px rgba(0,37,73,.3), 0 0 22px rgba(63,155,233,.12);
+  }
+
+  .footer {
+    margin-top: 36px; padding: 18px 0 0; display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;
+    color:#5f7183; font-size:10px; text-transform:uppercase; letter-spacing:.16em;
+    border-top:1px solid rgba(90,150,202,.12);
+  }
+  .hash { color:#7d91a5; }
+  @media (max-width: 860px) {
+    .services { grid-template-columns:1fr; }
+    .card { min-height: 220px; }
+    .services-head { align-items:flex-start; flex-direction:column; gap:10px; }
+    .services-meta { text-align:left; }
+    .hero { min-height: 470px; }
+    .topbar .right { display:none; }
+  }
+  @media (max-width: 520px) {
+    .main, .topbar { width:min(100% - 24px, 1180px); }
+    .main { padding-top:26px; }
+    .logo-wrap { padding-inline:10px; }
+    .hero { min-height:430px; }
+    .card { padding:26px 22px 25px; }
+    .corner { display:none; }
+  }
+</style>
+</head>
+<body>
+<div class="frame">
+  <div class="corner tl"></div>
+  <div class="corner br"></div>
+
+  <header class="topbar">
+    <div class="status"><span class="status-dot"></span> Systems Online // Site Deployment</div>
+    <div class="right">Raptor Consulting Group // Digital Operations</div>
+  </header>
+
+  <main class="main">
+    <section class="hero" aria-labelledby="coming-soon">
+      <div class="hero-inner">
+        <div class="logo-wrap logo-fade">
+          <img class="logo" src="raptor-consulting-logo-img-stg.webp" alt="Raptor Consulting Group" />
+        </div>
+        <div class="hero-fade">
+          <div class="eyebrow">Next-Generation Digital Operations</div>
+          <h1 id="coming-soon">Coming Soon</h1>
+          <p class="launch-copy">A precision-built digital platform is in development. Raptor Consulting Group is preparing a new command center for strategy, e-commerce, and high-performance web operations.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section aria-labelledby="services-title">
+      <div class="services-head content-fade delay-1">
+        <div class="services-title">
+          <small>Core Capabilities</small>
+          <h2 id="services-title">Mission-Ready Services</h2>
+        </div>
+        <div class="services-meta">Strategy // Commerce // Web Systems</div>
+      </div>
+
+      <div class="services content-fade delay-2">
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32"><path d="M5 25V17m7 8V10m7 15V14m7 11V6"/><path d="M4 8l7-3 7 4 9-6"/><circle cx="4" cy="8" r="1.5"/><circle cx="11" cy="5" r="1.5"/><circle cx="18" cy="9" r="1.5"/><circle cx="27" cy="3" r="1.5"/></svg>
+          </div>
+          <div class="num">CAPABILITY // 01</div>
+          <h3>SEO Business Services</h3>
+          <p>Strategy, audits, and organic growth optimization engineered to improve visibility, authority, and long-term search performance.</p>
+          <span class="bar"></span>
+        </article>
+
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32"><path d="M8 11h16l-1.5 15h-13z"/><path d="M12 11V8a4 4 0 0 1 8 0v3"/><path d="M11 17h10M11 21h6"/></svg>
+          </div>
+          <div class="num">CAPABILITY // 02</div>
+          <h3>Shopify Services</h3>
+          <p>Store setup, e-commerce optimization, and migrations designed for clean execution, stronger conversion paths, and scalable growth.</p>
+          <span class="bar"></span>
+        </article>
+
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32"><rect x="4" y="6" width="24" height="18" rx="1"/><path d="M4 11h24M9 16h5M9 20h10M20 16h3"/><path d="M12 27h8"/></svg>
+          </div>
+          <div class="num">CAPABILITY // 03</div>
+          <h3>Website Production Management</h3>
+          <p>Production-focused website optimization and ongoing management built to keep digital properties fast, stable, current, and conversion-ready.</p>
+          <span class="bar"></span>
+        </article>
+      </div>
+
+      <div class="call-cta content-fade delay-3">
+        <a class="call-button" href="tel:+17025211131" aria-label="Call to get started">Call To Get Stated</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>© 2026 Raptor Consulting Group</div>
+      <div class="hash">RCG // Build 01.08 // Secure Digital Systems</div>
+    </footer>
+  </main>
+</div>
+</body>
+</html>

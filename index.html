@@ -1,11 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Raptor Consulting Group — Coming Soon</title>
-<link rel="icon" type="image/webp" href="raptor-consulting-favicon-b-img.webp">
-<meta name="description" content="Raptor Consulting Group — SEO business services, Shopify services, and website production optimization & management." />
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -13,341 +9,318 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-TZVZGCSP');</script>
 <!-- End Google Tag Manager -->
-<style>
-  :root {
-    --bg: #03060b;
-    --bg-2: #07101b;
-    --panel: rgba(8, 18, 31, 0.84);
-    --panel-2: rgba(7, 13, 23, 0.96);
-    --line: rgba(82, 151, 219, 0.18);
-    --line-bright: rgba(98, 180, 255, 0.45);
-    --blue: #3f9be9;
-    --blue-2: #1a75c7;
-    --cyan: #67c9ff;
-    --silver: #c7d1dc;
-    --muted: #8597aa;
-    --white: #f4f8fc;
-  }
-  * { box-sizing: border-box; }
-  .content-fade { opacity: 0; transform: translateY(14px); animation: contentFadeIn 1s ease-out forwards; }
-  .logo-fade { opacity: 0; transform: translateY(8px) scale(.985); animation: logoFadeIn 1.2s ease-out forwards; }
-  .hero-fade { opacity: 0; transform: translateY(14px); animation: contentFadeIn 1s ease-out 1.05s forwards; }
-  .content-fade.delay-1 { animation-delay: .15s; }
-  .content-fade.delay-2 { animation-delay: .3s; }
-  .content-fade.delay-3 { animation-delay: .45s; }
-  .content-fade.delay-4 { animation-delay: .6s; }
-  @keyframes contentFadeIn { to { opacity: 1; transform: translateY(0); } }
-  @keyframes logoFadeIn { to { opacity: 1; transform: translateY(0) scale(1); } }
-  @media (prefers-reduced-motion: reduce) { .content-fade, .logo-fade, .hero-fade { opacity: 1; transform: none; animation: none; } }
-  html { margin: 0; padding: 0; scroll-behavior: smooth; max-width: 100%; overflow-x: hidden; }
-  body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    color: var(--white);
-    background:
-      radial-gradient(circle at 76% 14%, rgba(42, 130, 211, .18), transparent 28%),
-      radial-gradient(circle at 18% 76%, rgba(31, 86, 143, .14), transparent 34%),
-      linear-gradient(140deg, #020407 0%, #06101b 44%, #03070d 100%);
-    background-color: #03070B;
-    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    overflow-x: hidden;
-    max-width: 100%;
-  }
-  body::before {
-    content: "";
-    position: fixed; inset: 0;
-    pointer-events: none;
-    background-image:
-      linear-gradient(rgba(71, 132, 189, .07) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(71, 132, 189, .07) 1px, transparent 1px);
-    background-size: 54px 54px;
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,.7), transparent 76%);
-  }
-  body::after {
-    content: "";
-    position: fixed; inset: 0;
-    pointer-events: none;
-    background: repeating-linear-gradient(0deg, rgba(255,255,255,.012) 0, rgba(255,255,255,.012) 1px, transparent 1px, transparent 3px);
-    mix-blend-mode: screen;
-    opacity: .6;
-  }
-  .frame {
-    min-height: 100vh;
-    position: relative;
-    isolation: isolate;
-  }
-  .corner { position: absolute; width: 110px; height: 110px; opacity: .55; }
-  .corner.tl { top: 22px; left: 22px; border-top: 1px solid var(--line-bright); border-left: 1px solid var(--line-bright); }
-  .corner.br { right: 22px; bottom: 22px; border-right: 1px solid var(--line-bright); border-bottom: 1px solid var(--line-bright); }
-  .corner::after {
-    content: ""; position: absolute; width: 28px; height: 2px; background: var(--blue);
-  }
-  .corner.tl::after { left: 0; top: 18px; box-shadow: 0 7px 18px rgba(63,155,233,.7); }
-  .corner.br::after { right: 0; bottom: 18px; box-shadow: 0 7px 18px rgba(63,155,233,.7); }
-  .topbar {
-    width: min(1240px, calc(100% - 40px));
-    margin: 0 auto;
-    padding: 24px 0 0;
-    display: flex; justify-content: space-between; align-items: center;
-    color: var(--muted);
-    font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
-  }
-  .status { display:flex; align-items:center; gap:10px; white-space:nowrap; }
-  .status-dot {
-    width: 7px; height: 7px; border-radius: 50%; background: var(--cyan);
-    box-shadow: 0 0 0 5px rgba(103,201,255,.08), 0 0 18px rgba(103,201,255,.75);
-    animation: pulse 2.4s infinite ease-in-out;
-  }
-  @keyframes pulse { 0%,100% { opacity: .45; } 50% { opacity: 1; } }
-  .main { width: min(1180px, calc(100% - 40px)); margin: 0 auto; padding: 54px 0 70px; }
-  .hero {
-    display: grid;
-    place-items: center;
-    text-align: center;
-    min-height: 540px;
-    position: relative;
-  }
-  .hero::before {
-    content: "";
-    position: absolute;
-    width: min(760px, 88vw); aspect-ratio: 1/0.42;
-    background: radial-gradient(ellipse at center, rgba(55, 146, 225, .16), rgba(55,146,225,.04) 45%, transparent 72%);
-    filter: blur(4px);
-    z-index: -1;
-  }
-  .hero-inner { max-width: 820px; padding: 22px 0 24px; }
-  .logo-wrap {
-    width: min(500px, 86vw);
-    margin: 0 auto 22px;
-    padding: 18px 28px 10px;
-    position: relative;
-  }
-  .logo-wrap::before, .logo-wrap::after {
-    content:""; position:absolute; top:50%; width:88px; height:1px; background:linear-gradient(90deg, transparent, var(--line-bright));
-  }
-  .logo-wrap::before { right: 100%; }
-  .logo-wrap::after { left: 100%; transform: rotate(180deg); }
-  .logo { width:100%; display:block; filter: drop-shadow(0 14px 34px rgba(0, 50, 110, .42)); }
-  .eyebrow {
-    display:inline-flex; align-items:center; gap:10px;
-    color: var(--cyan); font-size: 11px; font-weight: 700; letter-spacing: .26em; text-transform: uppercase;
-    margin-bottom: 14px;
-  }
-  .eyebrow::before, .eyebrow::after { content:""; width:32px; height:1px; background: var(--blue); opacity:.7; }
-  h1 {
-    margin: 0;
-    font-size: clamp(32px, 5vw, 64px);
-    line-height: .88;
-    letter-spacing: -.045em;
-    text-transform: uppercase;
-    font-weight: 900;
-    background: linear-gradient(180deg, #ffffff 8%, #b8c8d8 46%, #6d7d8d 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: 0 0 40px rgba(76, 163, 235, .08);
-  }
-  .launch-copy {
-    margin: 21px auto 0;
-    color: #9fb1c2;
-    font-size: clamp(15px, 1.7vw, 18px);
-    line-height: 1.75;
-    max-width: 670px;
-  }
-  .divider {
-    height: 1px; margin: 38px 0 28px;
-    background: linear-gradient(90deg, transparent, rgba(83,158,226,.24) 14%, rgba(139,198,247,.5) 50%, rgba(83,158,226,.24) 86%, transparent);
-    position: relative;
-  }
-  .divider::after { content:""; position:absolute; left:50%; top:-2px; width:46px; height:5px; transform:translateX(-50%); background:var(--blue); clip-path:polygon(8% 0,92% 0,100% 50%,92% 100%,8% 100%,0 50%); box-shadow:0 0 20px rgba(63,155,233,.55); }
-  .services-head {
-    display:flex; align-items:end; justify-content:space-between; gap:28px; margin-bottom:18px;
-  }
-  .services-title small { color:var(--blue); text-transform:uppercase; letter-spacing:.2em; font-size:10px; font-weight:800; }
-  .services-title h2 { margin:6px 0 0; font-size:clamp(26px,4vw,42px); text-transform:uppercase; letter-spacing:-.02em; }
-  .services-meta { color:#708296; font-size:11px; letter-spacing:.15em; text-transform:uppercase; text-align:right; }
-  .services { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
-  .card {
-    position:relative;
-    padding: 30px 28px 28px;
-    min-height: 278px;
-    overflow:hidden;
-    background: linear-gradient(145deg, rgba(10,23,39,.92), rgba(4,10,18,.96));
-    border:1px solid rgba(99,160,213,.18);
-    clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 28px, 100% 100%, 28px 100%, 0 calc(100% - 28px));
-    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
-  }
-  .card:hover { transform:translateY(-5px); border-color:rgba(96,185,255,.42); box-shadow:0 20px 50px rgba(0,37,73,.28); }
-  .card::before {
-    content:""; position:absolute; inset:0; pointer-events:none;
-    background:linear-gradient(130deg, rgba(68,160,238,.12), transparent 34%);
-  }
-  .card::after {
-    content:""; position:absolute; right:18px; top:16px; width:70px; height:1px; background:var(--blue); opacity:.55;
-    box-shadow:0 7px 0 rgba(63,155,233,.24), 0 14px 0 rgba(63,155,233,.12);
-  }
-  .icon {
-    width:52px; height:52px; display:grid; place-items:center; margin-bottom:28px;
-    border:1px solid rgba(93,172,241,.34);
-    background:linear-gradient(145deg, rgba(31,93,148,.28), rgba(7,18,31,.38));
-    transform:skewX(-7deg);
-    box-shadow: inset 0 0 24px rgba(47,144,226,.08);
-  }
-  .icon svg { width:28px; height:28px; transform:skewX(7deg); stroke:var(--cyan); fill:none; stroke-width:1.5; }
-  .card .num { color:#4b6074; font-size:10px; letter-spacing:.18em; font-weight:800; margin-bottom:7px; }
-  .card h3 { margin:0 0 12px; font-size:21px; text-transform:uppercase; line-height:1.12; letter-spacing:-.01em; }
-  .card p { margin:0; color:#8fa2b5; line-height:1.7; font-size:14px; }
-  .card .bar { position:absolute; left:28px; bottom:0; width:72px; height:3px; background:linear-gradient(90deg,var(--blue),transparent); }
-  .call-cta {
-    margin: 26px auto 0;
-    display: flex;
-    justify-content: center;
-  }
-  .call-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 210px;
-    padding: 14px 24px;
-    color: var(--white);
-    background: linear-gradient(145deg, rgba(31,93,148,.34), rgba(7,18,31,.72));
-    border: 1px solid rgba(93,172,241,.42);
-    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
-    box-shadow: inset 0 0 24px rgba(47,144,226,.08), 0 8px 28px rgba(0,37,73,.18);
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: .16em;
-    font-size: 11px;
-    font-weight: 800;
-    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
-  }
-  .call-button::before {
-    content: "↗";
-    margin-right: 10px;
-    color: var(--cyan);
-    font-size: 14px;
-  }
-  .call-button:hover {
-    transform: translateY(-3px);
-    border-color: rgba(96,185,255,.65);
-    box-shadow: 0 14px 34px rgba(0,37,73,.3), 0 0 22px rgba(63,155,233,.12);
-  }
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Raptor Consulting Group | Search, Commerce &amp; Web Operations</title>
+<meta content="Raptor Consulting Group diagnoses and improves search systems, commerce systems, and web operations. Technical SEO System Audits verify what is real, prioritize what matters, and create an ordered remediation plan." name="description"/>
+<meta content="#1A75C7" name="theme-color"/>
 
-  .footer {
-    margin-top: 36px; padding: 18px 0 0; display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;
-    color:#5f7183; font-size:10px; text-transform:uppercase; letter-spacing:.16em;
-    border-top:1px solid rgba(90,150,202,.12);
-  }
-  .hash { color:#7d91a5; }
-  @media (max-width: 860px) {
-    .services { grid-template-columns:1fr; }
-    .card { min-height: 220px; }
-    .services-head { align-items:flex-start; flex-direction:column; gap:10px; }
-    .services-meta { text-align:left; }
-    .hero { min-height: 470px; }
-    .topbar .right { display:none; }
-  }
-  @media (max-width: 520px) {
-    .main, .topbar { width:min(100% - 24px, 1180px); }
-    .main { padding-top:26px; }
-    .logo-wrap { padding-inline:10px; }
-    .hero { min-height:430px; }
-    .card { padding:26px 22px 25px; }
-    .corner { display:none; }
-  }
-</style>
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FB25YXNJ0E"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-FB25YXNJ0E');
-</script>
+<link href="styles.css" rel="stylesheet"/>
+<link href="https://raptorconsultinggroup.com/" rel="canonical"/><script data-raptor-schema="v1" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://raptorconsultinggroup.com/#organization","name":"Raptor Consulting Group","url":"https://raptorconsultinggroup.com/","telephone":"+1-702-521-1131","email":"ricardo.canilao@gmail.com","logo":{"@type":"ImageObject","@id":"https://raptorconsultinggroup.com/#logo","url":"https://raptorconsultinggroup.com/assets/raptor-consulting-logo-img-header.webp","contentUrl":"https://raptorconsultinggroup.com/assets/raptor-consulting-logo-img-header.webp"}},{"@type":"WebSite","@id":"https://raptorconsultinggroup.com/#website","url":"https://raptorconsultinggroup.com/","name":"Raptor Consulting Group","publisher":{"@id":"https://raptorconsultinggroup.com/#organization"}},{"@type":"WebPage","@id":"https://raptorconsultinggroup.com/#webpage","url":"https://raptorconsultinggroup.com/","name":"Raptor Consulting Group | Search, Commerce & Web Operations","isPartOf":{"@id":"https://raptorconsultinggroup.com/#website"},"about":{"@id":"https://raptorconsultinggroup.com/#organization"},"description":"Raptor Consulting Group diagnoses and improves search systems, commerce systems, and web operations. Technical SEO System Audits verify what is real, prioritize what matters, and create an ordered remediation plan.","mainEntity":{"@id":"https://raptorconsultinggroup.com/#organization"}}]}</script><link href="assets/raptor-consulting-favicon.webp" rel="icon" sizes="1000x1000" type="image/webp"/></head>
 <body>
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZVZGCSP"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TZVZGCSP" style="display:none;visibility:hidden" width="0"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<div class="frame">
-  <div class="corner tl"></div>
-  <div class="corner br"></div>
-
-  <header class="topbar">
-    <div class="status"><span class="status-dot"></span> Systems Online // Site Deployment</div>
-    <div class="right">Raptor Consulting Group // Digital Operations</div>
-  </header>
-
-  <main class="main">
-    <section class="hero" aria-labelledby="coming-soon">
-      <div class="hero-inner">
-        <div class="logo-wrap logo-fade">
-          <img class="logo" src="raptor-consulting-logo-img-stg.webp" alt="Raptor Consulting Group" />
-        </div>
-        <div class="hero-fade">
-          <div class="eyebrow">Next-Generation Digital Operations</div>
-          <h1 id="coming-soon">Coming Soon</h1>
-          <p class="launch-copy">A precision-built digital platform is in development. Raptor Consulting Group is preparing a new command center for strategy, e-commerce, and high-performance web operations.</p>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section aria-labelledby="services-title">
-      <div class="services-head content-fade delay-1">
-        <div class="services-title">
-          <small>Core Capabilities</small>
-          <h2 id="services-title">Mission-Ready Services</h2>
-        </div>
-        <div class="services-meta">Strategy // Commerce // Web Systems</div>
-      </div>
-
-      <div class="services content-fade delay-2">
-        <article class="card">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 32 32"><path d="M5 25V17m7 8V10m7 15V14m7 11V6"/><path d="M4 8l7-3 7 4 9-6"/><circle cx="4" cy="8" r="1.5"/><circle cx="11" cy="5" r="1.5"/><circle cx="18" cy="9" r="1.5"/><circle cx="27" cy="3" r="1.5"/></svg>
-          </div>
-          <div class="num">CAPABILITY // 01</div>
-          <h3>SEO Business Services</h3>
-          <p>Strategy, audits, and organic growth optimization engineered to improve visibility, authority, and long-term search performance.</p>
-          <span class="bar"></span>
-        </article>
-
-        <article class="card">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 32 32"><path d="M8 11h16l-1.5 15h-13z"/><path d="M12 11V8a4 4 0 0 1 8 0v3"/><path d="M11 17h10M11 21h6"/></svg>
-          </div>
-          <div class="num">CAPABILITY // 02</div>
-          <h3>Shopify Services</h3>
-          <p>Store setup, e-commerce optimization, and migrations designed for clean execution, stronger conversion paths, and scalable growth.</p>
-          <span class="bar"></span>
-        </article>
-
-        <article class="card">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 32 32"><rect x="4" y="6" width="24" height="18" rx="1"/><path d="M4 11h24M9 16h5M9 20h10M20 16h3"/><path d="M12 27h8"/></svg>
-          </div>
-          <div class="num">CAPABILITY // 03</div>
-          <h3>Website Production Management</h3>
-          <p>Production-focused website optimization and ongoing management built to keep digital properties fast, stable, current, and conversion-ready.</p>
-          <span class="bar"></span>
-        </article>
-      </div>
-
-      <div class="call-cta content-fade delay-3">
-        <a class="call-button" href="tel:+17025211131" aria-label="Call to get started">Call To Get Stated</a>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div>© 2026 Raptor Consulting Group</div>
-      <div class="hash">RCG // Build 01.08 // Secure Digital Systems</div>
-    </footer>
-  </main>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<div class="site-frame">
+<div aria-hidden="true" class="corner corner-tl"></div>
+<div aria-hidden="true" class="corner corner-br"></div>
+<header class="site-header" id="top">
+<div class="utility-bar shell">
+<div class="status"><span aria-hidden="true" class="status-dot"></span> Raptor Systems // Operational</div>
+<div class="utility-label">Search // Commerce // Web Operations</div>
 </div>
+<div class="nav-shell shell">
+<a aria-label="Raptor Consulting Group home" class="brand" href="#top">
+<img alt="Raptor Consulting Group" height="106" onerror="this.hidden=true; this.nextElementSibling.hidden=false;" src="assets/raptor-consulting-logo-img-header.webp" width="378"/>
+<span class="brand-fallback" hidden="">RAPTOR <b>CONSULTING GROUP</b></span>
+</a>
+<button aria-controls="primary-nav" aria-expanded="false" class="menu-toggle" type="button">
+<span>Menu</span>
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+</button>
+<nav aria-label="Primary navigation" class="primary-nav" id="primary-nav">
+<a href="search-systems.html">Search Systems</a>
+<a href="commerce-systems.html">Commerce Systems</a>
+<a href="web-operations.html">Web Operations</a>
+<a href="technical-seo-system-audit.html">Technical SEO Audit</a>
+<a href="proof.html">Proof</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a class="nav-cta" href="tel:+17025211131">Call Raptor</a>
+</nav>
+</div>
+</header>
+<main id="main-content">
+<section aria-labelledby="hero-title" class="hero section shell">
+<div class="hero-grid">
+<div class="hero-copy reveal">
+<div class="eyebrow">Raptor // Digital Systems Consulting</div>
+<h1 id="hero-title">Pinpoint the exact errors hurting your performance.</h1>
+<p class="hero-lede">Raptor Consulting Group examines search, commerce, performance, analytics, content, and web operations as one connected system. We verify the problem, determine what matters, and build the order for fixing it.</p>
+<div class="hero-actions">
+<a class="button button-primary" href="technical-seo-system-audit.html">Explore the Technical SEO Audit</a>
+<a class="button button-secondary" href="tel:+17025211131">Call Raptor</a>
+</div>
+<div aria-label="Raptor consulting principles" class="hero-meta">
+<span>Platform-Agnostic</span>
+<span>Human-Verified</span>
+<span>Business-First</span>
+</div>
+</div>
+<div aria-label="Raptor system diagram" class="hero-system reveal delay-1">
+<div class="system-panel">
+<div class="panel-kicker">System // 01</div>
+<div class="system-core">
+<div class="core-ring ring-1"></div>
+<div class="core-ring ring-2"></div>
+<div class="core-ring ring-3"></div>
+<div class="core-label">
+<span>RAPTOR</span>
+<strong>DIAGNOSIS</strong>
+<small>Detection is not diagnosis.</small>
+</div>
+</div>
+<div class="system-readouts">
+<div><span>Search</span><b>Analyze</b></div>
+<div><span>Evidence</span><b>Verify</b></div>
+<div><span>Impact</span><b>Prioritize</b></div>
+<div><span>Execution</span><b>Sequence</b></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div aria-hidden="true" class="divider shell"></div>
+<section aria-labelledby="services-title" class="section shell" id="services">
+<div class="section-head reveal">
+<div>
+<div class="section-label">Core Systems</div>
+<h2 id="services-title">Three systems. One operating view.</h2>
+</div>
+<p>Raptor doesn’t separate website problems into artificial silos. Search visibility, ecommerce, infrastructure, content, analytics, and production often affect each other.</p>
+</div>
+<div class="system-cards">
+<article class="system-card reveal delay-1">
+<div aria-hidden="true" class="icon">
+<svg viewbox="0 0 32 32"><path d="M5 25V17m7 8V10m7 15V14m7 11V6"></path><path d="M4 8l7-3 7 4 9-6"></path><circle cx="4" cy="8" r="1.5"></circle><circle cx="11" cy="5" r="1.5"></circle><circle cx="18" cy="9" r="1.5"></circle><circle cx="27" cy="3" r="1.5"></circle></svg>
+</div>
+<div class="card-code">SYSTEM // 01</div>
+<h3>Search Systems</h3>
+<p>Technical SEO, search architecture, local search, structured data, and measurement connected to the pages and business outcomes that matter.</p>
+<ul class="mini-list">
+<li>Technical SEO</li>
+<li>Search Architecture</li>
+<li>Structured Data &amp; Schema</li>
+<li>Analytics &amp; Search Intelligence</li>
+</ul>
+<a class="text-link" href="search-systems.html">Explore Search Systems <span aria-hidden="true">↗</span></a>
+</article>
+<article class="system-card reveal delay-2">
+<div aria-hidden="true" class="icon">
+<svg viewbox="0 0 32 32"><path d="M8 11h16l-1.5 15h-13z"></path><path d="M12 11V8a4 4 0 0 1 8 0v3"></path><path d="M11 17h10M11 21h6"></path></svg>
+</div>
+<div class="card-code">SYSTEM // 02</div>
+<h3>Commerce Systems</h3>
+<p>Ecommerce work built around the full operating system: products, search architecture, technical health, merchandising, measurement, and customer lifecycle.</p>
+<ul class="mini-list">
+<li>Shopify Development</li>
+<li>Ecommerce Search Architecture</li>
+<li>Technical Optimization</li>
+<li>Product &amp; Commerce Operations</li>
+</ul>
+<a class="text-link" href="commerce-systems.html">Explore Commerce Systems <span aria-hidden="true">↗</span></a>
+</article>
+<article class="system-card reveal delay-3">
+<div aria-hidden="true" class="icon">
+<svg viewbox="0 0 32 32"><rect height="18" rx="1" width="24" x="4" y="6"></rect><path d="M4 11h24M9 16h5M9 20h10M20 16h3"></path><path d="M12 27h8"></path></svg>
+</div>
+<div class="card-code">SYSTEM // 03</div>
+<h3>Web Operations</h3>
+<p>Production, development, performance, migrations, infrastructure, and portfolio-level website management handled as an operating discipline.</p>
+<ul class="mini-list">
+<li>Production Management</li>
+<li>Portfolio Management</li>
+<li>Performance Optimization</li>
+<li>Migration &amp; Infrastructure</li>
+</ul>
+<a class="text-link" href="web-operations.html">Explore Web Operations <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+</section>
+<section aria-labelledby="audit-title" class="section section-deep" id="audit">
+<div class="shell">
+<div class="audit-intro reveal">
+<div>
+<div class="section-label">Flagship Offer // Search Systems</div>
+<h2 id="audit-title">Technical SEO System Audit</h2>
+</div>
+<div class="audit-copy">
+<p class="lead">Not a generic crawler export. Not a list of red flags copied from an SEO tool.</p>
+<p>Raptor checks the whole SEO system. Anything that can materially affect discovery, indexing, ranking, relevance, performance, user experience, measurement, or the business value of organic traffic belongs in the investigation.</p>
+</div>
+</div>
+<div aria-label="Eight Technical SEO System Audit categories" class="audit-grid">
+<article class="audit-module reveal"><span>01</span><h3>Discovery</h3><p>Crawlability, internal linking, robots directives, sitemap status, access, and orphan risk.</p></article>
+<article class="audit-module reveal delay-1"><span>02</span><h3>Indexation</h3><p>Indexed state, canonicals, redirects, duplicate risk, meta robots, and search engine status.</p></article>
+<article class="audit-module reveal delay-2"><span>03</span><h3>Performance</h3><p>Core Web Vitals, page weight, requests, CSS, JavaScript, images, fonts, apps, and hosting concerns.</p></article>
+<article class="audit-module reveal delay-3"><span>04</span><h3>On-Page</h3><p>Intent, topic alignment, titles, metas, headings, URLs, anchors, alt text, mobile behavior, and CTAs.</p></article>
+<article class="audit-module reveal"><span>05</span><h3>Content</h3><p>Purpose, coverage, clarity, duplication, topical gaps, entity signals, E-E-A-T, and rewrite needs.</p></article>
+<article class="audit-module reveal delay-1"><span>06</span><h3>Structured Data</h3><p>Schema type, JSON-LD, entity consistency, relationships, syntax, and visible-content alignment.</p></article>
+<article class="audit-module reveal delay-2"><span>07</span><h3>Authority</h3><p>Referring domains, target pages, anchors, relevance, suspicious patterns, lost links, and competitor gaps.</p></article>
+<article class="audit-module reveal delay-3"><span>08</span><h3>Measurement</h3><p>GSC, GA4, GTM, implementation quality, conversions, data flow, duplication, and consent concerns.</p></article>
+</div>
+<div class="audit-cta reveal">
+<div>
+<div class="card-code">AUDIT OUTPUT // EXECUTION-READY</div>
+<h3>Evidence becomes an ordered remediation roadmap.</h3>
+<p>Findings are verified, prioritized by impact and confidence, then sequenced around effort, dependencies, implementation risk, and logical order.</p>
+</div>
+<div class="audit-actions"><a class="button button-primary" href="technical-seo-system-audit.html">View the full audit process</a><a class="button button-secondary" href="tel:+17025211131">Call Raptor</a></div>
+</div>
+</div>
+</section>
+<section aria-labelledby="method-title" class="section shell" id="method">
+<div class="method-grid">
+<div class="method-copy reveal">
+<div class="section-label">HQCP // Human Quality Control Protocol</div>
+<h2 id="method-title">Detection is not diagnosis.</h2>
+<p class="lead">A crawler, AI system, validator, analytics platform, or SEO suite can detect something. Raptor determines whether it is real and worth acting on.</p>
+<p>Material findings move through a documented verification process before they become client-ready recommendations. AI and automated tools can supply evidence. They are not the final authority.</p>
+</div>
+<div aria-label="HQCP verification ladder" class="verification-ladder reveal delay-1">
+<div class="verification-step"><span>V0</span><div><b>Detected</b><small>Potential issue identified.</small></div></div>
+<div class="verification-step"><span>V1</span><div><b>Inspected</b><small>Human review completed.</small></div></div>
+<div class="verification-step"><span>V2</span><div><b>Reproduced</b><small>Condition observed directly.</small></div></div>
+<div class="verification-step"><span>V3</span><div><b>Corroborated</b><small>Independent source supports it.</small></div></div>
+<div class="verification-step active"><span>V4</span><div><b>Verified</b><small>Evidence and context support action.</small></div></div>
+</div>
+</div>
+<div class="sequence-line reveal">
+<div><span>01</span><b>Verify</b><small>Is it real?</small></div>
+<i aria-hidden="true">→</i>
+<div><span>02</span><b>Prioritize</b><small>How much does it matter?</small></div>
+<i aria-hidden="true">→</i>
+<div><span>03</span><b>Sequence</b><small>When should it happen?</small></div>
+<i aria-hidden="true">→</i>
+<div><span>04</span><b>Execute</b><small>What gets fixed next?</small></div>
+</div>
+</section>
+<section aria-labelledby="proof-home-title" class="section proof-home-section">
+<div class="shell">
+<div class="proof-home-head reveal">
+<div>
+<div class="section-label">Proof // Selected Operating Experience</div>
+<h2 id="proof-home-title">Show the work. Label the evidence.</h2>
+</div>
+<p>Raptor does not turn tool scores into case studies. These examples are anonymized and clearly labeled where the work comes from prior professional experience rather than a Raptor engagement.</p>
+</div>
+<div class="proof-home-grid">
+<article class="proof-home-card reveal">
+<div class="proof-evidence-tag">Search Systems // Client-Reported Outcome</div>
+<h3>Service structure + structured data</h3>
+<p>A complex accounting-services website was reorganized around the business model, supported with structured data, and aligned with local profile signals.</p>
+<a class="button button-secondary proof-card-action" href="case-study-search-structured-data.html">View Case Study <span aria-hidden="true">↗</span></a>
+</article>
+<article class="proof-home-card reveal delay-1">
+<div class="proof-evidence-tag">Commerce Systems // System Delivered</div>
+<h3>WordPress + Shopify commerce</h3>
+<p>A product-focused ecommerce client needed the storytelling flexibility of a fast WordPress site with Shopify handling the commerce layer.</p>
+<a class="button button-secondary proof-card-action" href="case-study-wordpress-shopify.html">View Case Study <span aria-hidden="true">↗</span></a>
+</article>
+<article class="proof-home-card reveal">
+<div class="proof-evidence-tag">Web Operations // Program Delivery</div>
+<h3>Large-scale website migration</h3>
+<p>A multi-thousand-site migration required portfolio tracking, special-project handling, ecommerce coordination, and controlled infrastructure moves.</p>
+<a class="button button-secondary proof-card-action" href="case-study-website-migration.html">View Case Study <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+<div class="proof-home-footer reveal">
+<a class="button button-primary" href="proof.html">Explore Proof &amp; Case Studies</a>
+</div>
+</div>
+</section>
+<section aria-labelledby="about-title" class="section section-band home-operating-problems" id="about">
+<div class="shell about-grid">
+<div class="reveal">
+<div class="section-label">Raptor Consulting Group</div>
+<h2 id="about-title">Built for websites with real operating problems.</h2>
+</div>
+<div class="about-copy reveal delay-1">
+<p>Raptor works where technical SEO, ecommerce, analytics, infrastructure, content, production, and business priorities intersect.</p>
+<p>The focus is diagnosis and implementation. Find the condition. Verify it. Explain it clearly. Decide what matters. Put the work in the right order.</p>
+<div class="principles home-operating-grid">
+<span class="home-operating-card">Plain-English client communication</span>
+<span class="home-operating-card">Platform-agnostic methodology</span>
+<span class="home-operating-card">Evidence before recommendation</span>
+<span class="home-operating-card">No tool score presented as strategy</span>
+</div>
+<a class="about-home-link button button-primary home-about-button" href="about.html">About Raptor Consulting Group <span aria-hidden="true">↗</span></a>
+</div>
+</div>
+</section>
+<section aria-labelledby="contact-title" class="section shell contact" id="contact">
+<div class="contact-panel reveal">
+<div>
+<div class="section-label">Start a Conversation</div>
+<h2 id="contact-title">Have a website problem that needs a real diagnosis?</h2>
+<p>Call or email Raptor directly. No intake form required.</p>
+</div>
+<div class="contact-actions">
+<a class="button button-primary" href="tel:+17025211131">Call Raptor</a><a class="button button-secondary button-sms" href="sms:+17025211131">Text Raptor</a><a class="button button-secondary" href="mailto:ricardo.canilao@gmail.com?subject=Raptor%20Consulting%20Inquiry">Email Raptor</a>
+<span class="contact-number">+1 (702) 521-1131</span>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer site-footer-expanded">
+<div class="shell footer-shell">
+<div class="footer-brand-stage">
+<a aria-label="Raptor Consulting Group home" class="footer-brand-mark footer-split-logo-wrap" href="index.html">
+<div aria-label="Raptor Consulting Group" class="footer-split-logo" data-footer-logo-reveal="" role="img">
+<div class="footer-split-logo__main">
+<img alt="" aria-hidden="true" class="footer-split-logo__part footer-split-logo__text" decoding="async" height="180" loading="lazy" src="assets/raptor-consulting-logo-img-text.webp" width="830"/>
+<img alt="" aria-hidden="true" class="footer-split-logo__part footer-split-logo__bird" decoding="async" height="441" loading="lazy" src="assets/raptor-consulting-logo-img-birdup.webp" width="604"/>
+</div>
+<img alt="" aria-hidden="true" class="footer-split-logo__part footer-split-logo__subtext" decoding="async" height="101" loading="lazy" src="assets/raptor-consulting-logo-img-text-cg.webp" width="652"/>
+</div>
+<span class="footer-brand-fallback" hidden="">RAPTOR <b>CONSULTING GROUP</b></span>
+</a>
+<div aria-hidden="true" class="footer-brand-rule"><span></span></div>
+</div>
+<div class="footer-main">
+<div class="footer-intro">
+<div class="footer-kicker">Raptor // Digital Systems Consulting</div>
+<p>Technical SEO, commerce systems, and web operations built around diagnosis, verification, and controlled execution.</p>
+<div class="footer-contact-links">
+<a href="tel:+17025211131">+1 (702) 521-1131</a>
+<a href="mailto:ricardo.canilao@gmail.com?subject=Raptor%20Consulting%20Inquiry">ricardo.canilao@gmail.com</a>
+</div>
+</div>
+<nav aria-label="Footer navigation" class="footer-nav">
+<div class="footer-nav-group">
+<span>Systems</span>
+<a href="search-systems.html">Search Systems</a>
+<a href="commerce-systems.html">Commerce Systems</a>
+<a href="web-operations.html">Web Operations</a>
+<a href="technical-seo-system-audit.html">Technical SEO Audit</a>
+</div>
+<div class="footer-nav-group">
+<span>Company</span>
+<a href="proof.html">Proof</a>
+<a href="about.html">About Raptor</a>
+<a href="contact.html">Contact</a>
+</div>
+</nav>
+</div>
+<div class="footer-bottom">
+<div>© 2026 Raptor Consulting Group</div>
+<div>Search // Commerce // Web Operations</div>
+<a href="#top">Return to top ↑</a>
+</div>
+</div>
+</footer>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
