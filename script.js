@@ -137,3 +137,34 @@
 
   observer.observe(footerBrand);
 })();
+
+
+/* =========================================================
+   BUILD 15.62 // CONTACT PRIVACY
+   Direct call/text links are generated at runtime so the phone
+   number is not exposed as visible text or a tel:/sms: URI in HTML.
+   ========================================================= */
+(() => {
+  const encodedContact = 'KzE3MDI1MjExMTMx';
+
+  const decodeContact = () => {
+    try {
+      return window.atob(encodedContact);
+    } catch (error) {
+      return '';
+    }
+  };
+
+  document.querySelectorAll('[data-contact-action]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const number = decodeContact();
+      if (!number) return;
+      if (link.dataset.contactAction === 'call') {
+        window.location.href = `tel:${number}`;
+      } else if (link.dataset.contactAction === 'text') {
+        window.location.href = `sms:${number}`;
+      }
+    });
+  });
+})();

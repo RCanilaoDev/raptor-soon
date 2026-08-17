@@ -5739,3 +5739,25 @@ body {
     bottom: 31px;
   }
 }
+
+
+/* =========================================================
+   BUILD 15.61 // MOBILE FOOTER BIRD TRUE 30% LIFT
+   Correct the prior interpretation: move the bird upward by
+   30% of its rendered image height, not 30% of the bottom offset.
+   Homepage + Contact only contain this split footer logo.
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .footer-split-logo__bird,
+  .footer-brand-mark .footer-split-logo__bird {
+    bottom: clamp(69px, 13.79vw, 123px);
+  }
+}
+
+@media (max-width: 520px) {
+  .footer-split-logo__bird,
+  .footer-brand-mark .footer-split-logo__bird {
+    bottom: 53px;
+  }
+}

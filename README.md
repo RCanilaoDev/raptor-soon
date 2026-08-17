@@ -16,8 +16,8 @@ Build 14 adds the proof and case-study layer.
 - No invented ROI, ranking lifts, conversion percentages, or client names were added.
 
 ## Contact
-- Phone: +1 (702) 521-1131
-- Email: ricardo.canilao@gmail.com
+- Phone: Call or text Raptor
+- Email: raptorsystems.ai@gmail.com
 
 ## Logo
 Place the approved Raptor logo at:
@@ -304,7 +304,7 @@ Changes:
 - Existing Client Delivery sticky behavior remains unchanged.
 
 ## Build 15.28 SMS contact path
-- Added `Text Raptor` buttons using `sms:+17025211131` to all existing site `.contact-actions` conversion panels.
+- Added `Text Raptor` buttons using `sms:Call or text Raptor` to all existing site `.contact-actions` conversion panels.
 - Updated 24 pages and 24 contact CTA panels.
 - Contact page hero now offers Email, Call, and Text.
 - Contact page `Direct Contact // Two Paths` is now `Direct Contact // Three Paths`.
@@ -550,3 +550,20 @@ Changes:
 - Added `?v=15.60` versioning to favicon URLs to help bypass stale browser favicon caches after deployment.
 - Original 1000×1000 WebP source remains in `assets/`.
 - Applied the favicon set to all 25 HTML pages.
+
+## Build 15.61 Mobile footer bird true 30% lift
+- Corrected the prior mobile bird adjustment.
+- The bird is now moved upward by approximately 30% of its rendered image height, rather than increasing its bottom offset by 30%.
+- <=700px: `bottom: clamp(69px, 13.79vw, 123px)`.
+- <=520px: `bottom: 53px`.
+- Applies only where the split footer logo exists: Homepage and Contact.
+- RAPTOR wordmark and CONSULTING GROUP subtext remain fixed.
+- Desktop bird position remains unchanged.
+
+## Build 15.62 Contact privacy cleanup
+- Replaced the previous Gmail address site-wide with `raptorsystems.ai@gmail.com`.
+- Removed the public phone number from visible page text.
+- Removed direct phone-number `tel:` and `sms:` URLs from HTML source.
+- Removed the `telephone` property from Organization JSON-LD.
+- Preserved Call Raptor / Text Raptor behavior through runtime-generated links using an encoded contact value in JavaScript.
+- The literal phone number is no longer present in text-based source files in this build.
